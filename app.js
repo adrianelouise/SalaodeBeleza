@@ -5,7 +5,7 @@
   const cadastrarServico = require('./cadastro/cadastrarServico');
   
   const atualizarAgendamento = require('./edicao/atualizarAgendamento');
-  const listarAgendamento = require('./edicao/removerAgendamento');
+  const listarAgendamentos = require('./edicao/removerAgendamento');
   const removerCliente = require('./edicao/removerCliente');
   const removerServico = require('./edicao/removerServivo');
 
