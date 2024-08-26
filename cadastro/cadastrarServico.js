@@ -1,6 +1,6 @@
    const { servicos} = require('../data');
 
-   function cadastrarServico(servico);{
+   function cadastrarServico(servico){
        servico.id = servicos.lenght + 1;
        servico.push(servico);
    };

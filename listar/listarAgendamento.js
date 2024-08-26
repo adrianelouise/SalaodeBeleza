@@ -1,11 +1,11 @@
   const { agendamentos, servicos } = require('../data');
 
   function listarAgendamentos(idCliente){
-    const agendamentosCliente = agendamentos.filter( a => a.idCliente ===isCliente);
+    const agendamentosCliente = agendamentos.filter( a => a.idCliente === idCliente);
 
     if (agendamentosCliente.length === 0){
         console.log(`Nennhum agendamento encontrado para o cliente com ID ${idCliente}.`);
-    return:
+    return;
     }
     console.log(`Agendamentos para cliente ID ${idCliente}:`);
     agendamentosCliente.forEach(agendamento => {

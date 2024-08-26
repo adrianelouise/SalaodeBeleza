@@ -1,6 +1,6 @@
   const { agendamentos, servicos } = require('../data');
 
-  function listarAgendamentos(idCliente){
+  function listarTodosAgendamentos(idCliente){
     const agendamentosCliente = agendamentos.filter( a => a.idCliente ===isCliente);
 
     if (agendamentosCliente.length === 0){
@@ -18,4 +18,4 @@
     });
   }
 
-  module.exports = listarAgendamentos;
+  module.exports = listarTodosAgendamentos;
