@@ -1,21 +1,18 @@
-  const { agendamentos, servicos } = require('../data');
+const { agendamentos } = require('../data');
 
-  function listarTodosAgendamentos(idCliente){
-    const agendamentosCliente = agendamentos.filter( a => a.idCliente ===isCliente);
-
-    if (agendamentosCliente.length === 0){
-        console.log(`Nennhum agendamento encontrado para o cliente com ID ${idCliente}.`);
-    return;
+function listarTodosAgendamentos(){
+    if (agendamentos.length === 0){
+        console.log('Nenhum agendamento encontrado.');
+    } else {
+        agendamentos.forEach(agendamento => {
+            console.log(`
+            ID Agendamento: ${agendamento.id},
+            ID Serviço: ${agendamento.idServico},
+            ID Cliente: ${agendamento.idCliente},
+            Data: ${agendamento.data},
+            Horário: ${agendamento.horario}`);
+        })
     }
-    console.log(`Agendamentos para cliente ID ${idCliente}:`);
-    agendamentosCliente.forEach(agendamento => {
-        console.log(`
-        ID: ${agendamento.idServico},
-        Serviço ID: ${agendamento.idServico},
-        Data: ${agendamento.data},
-        Horario : ${agendamento.horario}`);
-        
-    });
-  }
+}
 
-  module.exports = listarTodosAgendamentos;
+module.exports = listarTodosAgendamentos;
